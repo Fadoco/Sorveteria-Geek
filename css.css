@@ -1,0 +1,284 @@
+:root {
+    --primary: #ff7eb9;
+    --secondary: #70d6ff;
+    --accent: #ffd166;
+    --dark: #2b2d42;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fff0f3;
+    background-image: radial-gradient(#ffc2d1 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+header {
+    background: var(--primary);
+    padding: 30px;
+    border-bottom: 8px solid var(--dark);
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+header h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 4px 4px 0px var(--dark);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    background: var(--accent);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    border: 3px solid var(--dark);
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: scale(1.1) rotate(-3deg);
+    background: white;
+}
+
+.section-title {
+    font-family: 'Cherry Bomb One', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 40px 0;
+    text-shadow: 2px 2px 0px var(--dark);
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 0 10%;
+}
+
+.anime-card {
+    background: white;
+    border: 4px solid var(--dark);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 8px 8px 0px var(--secondary);
+}
+
+.anime-card img {
+    width: 180px;
+    border-radius: 15px;
+    border: 3px solid var(--dark);
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.anime-card :hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.img-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ef476f;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid var(--dark);
+    transform: rotate(15deg);
+}
+
+.bubble-speech {
+    background: white;
+    border: 4px solid var(--dark);
+    padding: 30px;
+    border-radius: 50px;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 10px 10px 0px var(--accent);
+}
+
+.video-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 6px solid var(--dark);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 12px 12px 0px var(--primary);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+/* css menu */ 
+/* Configurações para a Página de Menu */
+.menu-page {
+    background-color: #f0f4f8; /* Tom levemente azulado/cinza geek */
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Textura sutil */
+}
+
+.menu-header {
+    background: #70d6ff !important; /* Azul secundário do seu tema */
+    padding: 40px;
+    text-align: center;
+    border-bottom: 8px solid #2b2d42;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 15px;
+    background: #ffd166;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 3px solid #2b2d42;
+    text-decoration: none;
+    color: #2b2d42;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    transform: translateX(-5px);
+    background: white;
+}
+
+.menu-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border: 6px solid #2b2d42;
+    border-radius: 40px;
+    box-shadow: 20px 20px 0px #ff7eb9; /* Sombra rosa do seu tema */
+}
+
+.category-title {
+    font-family: 'Cherry Bomb One', cursive;
+    color: #ff7eb9;
+    font-size: 2rem;
+    margin: 40px 0 20px;
+    border-bottom: 4px dashed #ffd166;
+}
+
+/* Lista de Itens Estilo RPG */
+.menu-item-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.item-dots {
+    flex: 1;
+    border-bottom: 3px dotted #ccc;
+    margin: 0 10px;
+}
+
+.item-price {
+    color: #ef476f;
+    background: #fff0f3;
+    padding: 4px 12px;
+    border-radius: 10px;
+    border: 2px solid #2b2d42;
+}
+
+.highlight-item {
+    color: #4b0082;
+    background: #fdf2ff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Toppings/Tags */
+.toppings-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.topping-tag {
+    background: #ffd166;
+    border: 3px solid #2b2d42;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px #2b2d42;
+}
+
+.menu-footer {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Fredoka', sans-serif;
+    color: #2b2d42;
+}
+
+/* galeria */
+/* Container da Galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Item Individual da Galeria */
+.galeria-item {
+    background: #ffffff;
+    border: 4px solid #2b2d42; /* Contorno preto estilo anime */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #70d6ff; /* Sombra sólida azul */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Garante que a imagem preencha o quadrado sem esticar */
+    border-radius: 10px;
+    border: 2px solid #2b2d42;
+}
+
+.galeria-item figcaption {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #2b2d42;
+    text-align: center;
+}
+
+/* Efeito Hover (Interação) */
+.galeria-item:hover {
+    transform: scale(1.05) rotate(-2deg); /* Dá um leve pulo e gira */
+    box-shadow: 15px 15px 0px #ff7eb9; /* Sombra muda para rosa */
+    cursor: pointer;
+}
