@@ -1,42 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css.css">
+    <title>Galeria de Arte - Grimório de Sabores</title>
+    <link rel="stylesheet" href="css.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="menu-header">
+        <a href="/index.html" class="btn-back">⬅ Voltar ao Isekai</a>
+        <h1>Grimório de Sabores</h1>
+        <p>Suba de nível com cada colherada! ✨</p>
+    </header>
+
     <section id="galeria" class="anime-section">
-    <h2 class="section-title">Registros do Multiverso 📸</h2>
-    <div class="galeria-grid">
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1578632292335-df3abbb0d586?q=80&w=400&h=400&fit=crop" alt="Anime Art 1">
-            <figcaption>Exploração nível 1 ✨</figcaption>
-        </figure>
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1613373173733-5188e477085c?q=80&w=400&h=400&fit=crop" alt="Anime Art 2">
-            <figcaption>Cidade Isekai 🌃</figcaption>
-        </figure>
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=400&h=400&fit=crop" alt="Anime Art 3">
-            <figcaption>Encontro de Guildas ⚔️</figcaption>
-        </figure>
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=400&h=400&fit=crop" alt="Anime Art 4">
-            <figcaption>Arte Proibida 🖌️</figcaption>
-        </figure>
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1528360983277-13d401ccd186?q=80&w=400&h=400&fit=crop" alt="Anime Art 5">
-            <figcaption>Portal Aberto 🌀</figcaption>
-        </figure>
-        <figure class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?q=80&w=400&h=400&fit=crop" alt="Anime Art 6">
-            <figcaption>Luz de Neon 🌈</figcaption>
-        </figure>
+        <h2 class="section-title">Registros do Multiverso 📸</h2>
+        <div class="galeria-grid">
+            
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/naruto.png" alt="Rasen-Cream">
+                <figcaption>Rasen-Cream ✨</figcaption>
+            </figure>
+
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/maple.png" alt="Cidade Isekai">
+                <figcaption>Cream-Canon 🌃</figcaption>
+            </figure>
+
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/megumin.png" alt="Encontro de Guildas">
+                <figcaption>Explosion⚔️</figcaption>
+            </figure>
+
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/acelerencer.png">
+                <figcaption>Acellerencers ⚔️</figcaption>
+            </figure>
+
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/personagem.png">
+                <figcaption>Guardian ⚔️</figcaption>
+            </figure>
+
+            <figure class="galeria-item">
+                <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                <img src="/imagens/gojo.png">
+                <figcaption>Encontro de Guildas ⚔️</figcaption>
+            </figure>
+
+            </div>
+    </section>
+
+    <div id="modal-container" class="modal-overlay" onclick="fecharModal()">
+        <span class="close-btn">&times;</span>
+        <img id="img-modal" src="" alt="Imagem em destaque">
     </div>
-</section>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

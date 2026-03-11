@@ -135,15 +135,15 @@ footer {
     margin-top: 50px;
 }
 
-/* css menu */ 
+
 /* Configurações para a Página de Menu */
 .menu-page {
-    background-color: #f0f4f8; /* Tom levemente azulado/cinza geek */
-    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Textura sutil */
+    background-color: #f0f4f8;
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
 }
 
 .menu-header {
-    background: #70d6ff !important; /* Azul secundário do seu tema */
+    background: #70d6ff !important; 
     padding: 40px;
     text-align: center;
     border-bottom: 8px solid #2b2d42;
@@ -174,7 +174,7 @@ footer {
     padding: 40px;
     border: 6px solid #2b2d42;
     border-radius: 40px;
-    box-shadow: 20px 20px 0px #ff7eb9; /* Sombra rosa do seu tema */
+    box-shadow: 20px 20px 0px #ff7eb9;
 }
 
 .category-title {
@@ -185,7 +185,7 @@ footer {
     border-bottom: 4px dashed #ffd166;
 }
 
-/* Lista de Itens Estilo RPG */
+
 .menu-item-row {
     display: flex;
     align-items: baseline;
@@ -240,7 +240,6 @@ footer {
 }
 
 /* galeria */
-/* Container da Galeria */
 .galeria-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -250,20 +249,20 @@ footer {
     margin: 0 auto;
 }
 
-/* Item Individual da Galeria */
+
 .galeria-item {
     background: #ffffff;
-    border: 4px solid #2b2d42; /* Contorno preto estilo anime */
+    border: 4px solid #2b2d42; 
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 10px 10px 0px #70d6ff; /* Sombra sólida azul */
+    box-shadow: 10px 10px 0px #70d6ff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .galeria-item img {
     width: 100%;
     height: 250px;
-    object-fit: cover; /* Garante que a imagem preencha o quadrado sem esticar */
+    object-fit: cover; 
     border-radius: 10px;
     border: 2px solid #2b2d42;
 }
@@ -276,9 +275,306 @@ footer {
     text-align: center;
 }
 
-/* Efeito Hover (Interação) */
+
 .galeria-item:hover {
-    transform: scale(1.05) rotate(-2deg); /* Dá um leve pulo e gira */
-    box-shadow: 15px 15px 0px #ff7eb9; /* Sombra muda para rosa */
+    transform: scale(1.05) rotate(-2deg); 
+    box-shadow: 15px 15px 0px #ff7eb9; 
     cursor: pointer;
+}
+
+
+.fullscreen-btn {
+    display: block;
+    margin: 10px auto;
+    background: #ef476f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 3px solid #2b2d42;
+    font-weight: bold;
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fullscreen-btn:hover {
+    transform: scale(1.1);
+    background: #ff7eb9;
+}
+
+/* Configuração do Modal (Tela Cheia) */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 45, 66, 0.95); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#img-modal {
+    max-width: 90%;
+    max-height: 80%;
+    border: 6px solid #ef476f;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(239, 71, 111, 0.4);
+    animation: surgindo 0.4s ease-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 60px;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+
+@keyframes surgindo {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Configurações para a Página Social */
+/* ==========================================================
+   ESTILOS GERAIS E VARIÁVEIS (SORVETERIA GEEK)
+   ========================================================== */
+:root {
+    --primary: #ff7eb9;
+    --secondary: #70d6ff;
+    --accent: #ffd166;
+    --dark: #2b2d42;
+    --pink-dark: #ef476f;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fff0f3;
+    background-image: radial-gradient(#ffc2d1 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--dark);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Header Principal */
+header {
+    background: var(--primary);
+    padding: 30px;
+    border-bottom: 8px solid var(--dark);
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+header h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 4px 4px 0px var(--dark);
+    letter-spacing: 2px;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    background: var(--accent);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    border: 3px solid var(--dark);
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: scale(1.1) rotate(-3deg);
+    background: white;
+}
+
+/* Galeria e Cards */
+.section-title {
+    font-family: 'Cherry Bomb One', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 40px 0;
+    text-shadow: 2px 2px 0px var(--dark);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    background: #ffffff;
+    border: 4px solid var(--dark); 
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 10px 10px 0px var(--secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+}
+
+.galeria-item:hover {
+    transform: scale(1.05) rotate(-2deg); 
+    box-shadow: 15px 15px 0px var(--primary); 
+    cursor: pointer;
+}
+
+/* Botão Tela Cheia */
+.fullscreen-btn {
+    display: block;
+    margin: 10px auto;
+    background: var(--pink-dark);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 3px solid var(--dark);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fullscreen-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary);
+}
+
+/* Modal / Overlay */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 45, 66, 0.95); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-modal {
+    max-width: 90%;
+    max-height: 80%;
+    border: 6px solid var(--pink-dark);
+    border-radius: 20px;
+    animation: surgindo 0.4s ease-out;
+}
+
+@keyframes surgindo {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================
+   CONFIGURAÇÕES EXCLUSIVAS DA PÁGINA SOCIAL (ISO)
+   ========================================================== */
+
+
+.fadoco-social-scope {
+    background-color: var(--dark) !important;
+    background-image: none !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.fadoco-social-scope .social-bg-layer {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, #ef476f22 0%, #2b2d42 80%);
+    z-index: -1;
+}
+
+.fadoco-social-scope .social-wrapper {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.fadoco-social-scope .social-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border: 4px solid var(--pink-dark);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.fadoco-social-scope .social-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fadoco-social-scope .social-title {
+    font-family: 'Cherry Bomb One', cursive;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 3px 3px 0px var(--pink-dark);
+}
+
+.fadoco-social-scope .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 15px;
+    padding: 16px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.fadoco-social-scope .social-btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 0px var(--dark);
+    border-color: var(--dark);
+}
+
+.fadoco-social-scope .store-special {
+    background: var(--accent);
+    color: var(--dark);
+    border: 3px solid var(--dark);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
