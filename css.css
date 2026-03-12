@@ -592,24 +592,27 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        padding: 40px 15px 60px 15px;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        padding: 30px 15px 80px 15px; /* Aumentado o padding inferior para os botões não baterem na diagonal */
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
     header h1 {
-        font-size: 2.2rem;
-        line-height: 1.1;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        padding: 0;
     }
 
     nav a {
-        width: 80%;
+        width: 200px; /* Largura fixa para ficarem todos do mesmo tamanho e alinhados */
         text-align: center;
+        display: block;
+        box-sizing: border-box;
     }
 
     .section-title {
@@ -618,89 +621,33 @@ footer {
 
     .anime-grid {
         padding: 0 5%;
-        gap: 20px;
-    }
-
-    .anime-card img {
-        height: 200px;
     }
 
     .menu-container {
-        width: 92%;
+        width: 90%;
         padding: 20px;
-        margin: 20px auto;
     }
 
     .menu-item-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
-        font-size: 1.1rem;
     }
 
     .item-dots {
         display: none;
     }
 
-    .item-price {
-        align-self: flex-end;
-        margin-top: -5px;
-    }
-
-    .bubble-speech {
-        width: 85%;
-        padding: 20px;
-        border-radius: 30px;
-        font-size: 0.95rem;
-    }
-
     .galeria-grid {
         grid-template-columns: 1fr;
-    }
-
-    .galeria-item img {
-        height: 200px;
-    }
-
-    .video-container {
-        width: 95%;
-        border-width: 4px;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 20px;
-    }
-
     header h1 {
         font-size: 2rem;
     }
 
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .anime-card {
-        padding: 10px;
-        box-shadow: 5px 5px 0px var(--secondary);
-    }
-
-    .fullscreen-btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-
-    .fadoco-social-scope .social-wrapper {
-        width: 85%;
-    }
-
-    .fadoco-social-scope .social-title {
-        font-size: 1.6rem;
-    }
-
-    footer {
-        padding: 30px 15px;
-        font-size: 0.9rem;
+    nav a {
+        width: 85%; /* Em telas muito pequenas, ocupa quase tudo para não ficar "torto" */
     }
 }
