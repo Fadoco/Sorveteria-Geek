@@ -127,6 +127,14 @@ nav a:hover {
     box-shadow: 12px 12px 0px var(--primary);
 }
 
+/* Garante que vídeos dentro do container fiquem responsivos */
+.video-container iframe, 
+.video-container video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
 footer {
     background: var(--dark);
     color: white;
@@ -585,34 +593,29 @@ footer {
 }
 
 
-
-
-
 /* RESPONSIVO PARA TELEFONE */
 
 @media (max-width: 768px) {
     header {
-        padding: 30px 15px 80px 15px; /* Aumentado o padding inferior para os botões não baterem na diagonal */
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        padding: 40px 15px 60px 15px;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
 
     header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        font-size: 2.2rem;
+        line-height: 1.1;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
-        padding: 0;
+        gap: 10px;
     }
 
     nav a {
-        width: 200px; /* Largura fixa para ficarem todos do mesmo tamanho e alinhados */
+        width: 80%;
+        display: list-item;
         text-align: center;
-        display: block;
-        box-sizing: border-box;
     }
 
     .section-title {
@@ -621,33 +624,93 @@ footer {
 
     .anime-grid {
         padding: 0 5%;
+        gap: 20px;
+    }
+
+    .anime-card img {
+        height: 200px;
+        width: 100%; /* Ajuste para preencher melhor o card */
+        max-width: 180px;
     }
 
     .menu-container {
-        width: 90%;
+        width: 92%;
         padding: 20px;
+        margin: 20px auto;
+        box-shadow: 10px 10px 0px #ff7eb9; /* Sombra menor para mobile */
     }
 
     .menu-item-row {
         flex-direction: column;
         align-items: flex-start;
+        gap: 5px;
+        font-size: 1.1rem;
     }
 
     .item-dots {
         display: none;
     }
 
+    .item-price {
+        align-self: flex-end;
+        margin-top: -5px;
+    }
+
+    .bubble-speech {
+        width: 85%;
+        padding: 20px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+    }
+
     .galeria-grid {
         grid-template-columns: 1fr;
+    }
+
+    .galeria-item img {
+        height: 200px;
+    }
+
+    .video-container {
+        width: 95%;
+        border-width: 4px;
+        box-shadow: 8px 8px 0px var(--primary); /* Sombra menor */
     }
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
     header h1 {
         font-size: 2rem;
     }
 
-    nav a {
-        width: 85%; /* Em telas muito pequenas, ocupa quase tudo para não ficar "torto" */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .anime-card {
+        padding: 10px;
+        box-shadow: 5px 5px 0px var(--secondary);
+    }
+
+    .fullscreen-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .fadoco-social-scope .social-wrapper {
+        width: 85%;
+    }
+
+    .fadoco-social-scope .social-title {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        padding: 30px 15px;
+        font-size: 0.9rem;
     }
 }
